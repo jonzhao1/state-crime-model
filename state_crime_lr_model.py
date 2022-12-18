@@ -173,9 +173,9 @@ hyperparams = all_models.getEstimatorParamMaps()[np.argmax(all_models.avgMetrics
 for i in range(len(hyperparams.items())):
     print([x for x in hyperparams.items()][i])
 
-(Param(parent='LogisticRegression_daf2ca402a50', name='regParam', doc='regularization parameter (>= 0).'), 1.0)
-(Param(parent='LogisticRegression_daf2ca402a50', name='elasticNetParam', doc='the ElasticNet mixing parameter, in 
-range [0, 1]. For alpha = 0, the penalty is an L2 penalty. For alpha = 1, it is an L1 penalty.'), 0.0)
+#(Param(parent='LogisticRegression_daf2ca402a50', name='regParam', doc='regularization parameter (>= 0).'), 1.0)
+#(Param(parent='LogisticRegression_daf2ca402a50', name='elasticNetParam', doc='the ElasticNet mixing parameter, in 
+#range [0, 1]. For alpha = 0, the penalty is an L2 penalty. For alpha = 1, it is an L1 penalty.'), 0.0)
 
 # Choose the best model
 bestModel = all_models.bestModel
