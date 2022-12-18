@@ -41,14 +41,14 @@ average_crime_sdf.show(10)
 sdf = sdf.join(average_crime_sdf, "Year")
 
 # Show some of the new, joined data
-sdf.select('State','Year','Crime','Population','Crime_Per_Hundred_Thousand','average_crime').show(10)
+sdf.select('Year','State','Population','Crime','Crime_Per_Hundred_Thousand','average_crime').show(10)
 
 
 # Create the label, =1 if Crime_per_Hundred_Thousand > average_crime, =0 otherwise
 sdf = sdf.withColumn("highercrime", when(sdf.Crime_Per_Hundred_Thousand > sdf.average_crime, 1.0).otherwise(0.0))
 
 # Show some of the data with the label
-sdf_select = sdf.select('State','Year','Crime','Population','Crime_per_Hundred_Thousand','average_crime','highercrime').show(10)
+sdf_select = sdf.select('Year','State','Population','Crime','Crime_per_Hundred_Thousand','average_crime','highercrime').show(10)
 
 
 
