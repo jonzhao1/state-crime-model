@@ -2,7 +2,7 @@
 
 import boto3
 import pandas as pd
-bucket_name="big-data-project-1"   # Put your bucket name here
+bucket_name="bucket-name"   # Put your bucket name here
 s3_client = boto3.client('s3', use_ssl=False)
 s3_resource = boto3.resource('s3')
 
