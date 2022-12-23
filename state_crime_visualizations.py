@@ -29,8 +29,8 @@ import plotly.express as px
 
 
 # Set up the path to the final dataset in S3 bucket
-bucket = 'big-data-project-1/'
-filename = 'datacommons_api_abbreviations.csv'
+bucket = 'bucket-name/'   # put your bucket here
+filename = 'dataset.csv'   # put the name of your dataset file here
 file_path = 's3a://' + bucket + filename
 
 # Create a Spark Dataframe from the file on S3
@@ -247,7 +247,7 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/ROC_Curve.png', 'wb') as f:
+with s3.open('s3://bucket-name/ROC_Curve.png', 'wb') as f:
     f.write(img_data.getbuffer())
 
 
@@ -305,7 +305,7 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/line_national_crime.png', 'wb') as f:
+with s3.open('s3://bucket-name/line_national_crime.png', 'wb') as f:
     f.write(img_data.getbuffer())
 
 
@@ -359,7 +359,7 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/line_bar_pct_change_national_crime.png', 'wb') as f:
+with s3.open('s3://bucket-name/line_bar_pct_change_national_crime.png', 'wb') as f:
     f.write(img_data.getbuffer())
 
 
@@ -406,7 +406,7 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/map_national_crime_2011.png', 'wb') as f:
+with s3.open('s3://bucket-name/map_national_crime_2011.png', 'wb') as f:
     f.write(img_data.getbuffer())
 
 
@@ -447,7 +447,7 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/map_national_crime_2019.png', 'wb') as f:
+with s3.open('s3://bucket-name/map_national_crime_2019.png', 'wb') as f:
     f.write(img_data.getbuffer())
 
 
@@ -491,7 +491,7 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/map_crime_difference_2011.png', 'wb') as f:
+with s3.open('s3://bucket-name/map_crime_difference_2011.png', 'wb') as f:
     f.write(img_data.getbuffer())
 
 
@@ -534,5 +534,5 @@ img_data.seek(0)
 
 # Connect to the s3fs file system
 s3 = s3fs.S3FileSystem(anon=False)
-with s3.open('s3://big-data-project-1/map_crime_difference_2019.png', 'wb') as f:
+with s3.open('s3://bucket-name/map_crime_difference_2019.png', 'wb') as f:
     f.write(img_data.getbuffer())
