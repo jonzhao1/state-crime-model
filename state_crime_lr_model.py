@@ -17,8 +17,8 @@ import numpy as np
 
 
 # Set up the path to the final dataset in S3 bucket
-bucket = 'big-data-project-1/'
-filename = 'datacommons_api.csv'
+bucket = 'bucket-name/'   # put your bucket here
+filename = 'dataset.csv'   # put the name of your dataset file here
 file_path = 's3a://' + bucket + filename
 
 # Create a Spark Dataframe from the file on S3
